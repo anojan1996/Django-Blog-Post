@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=100)
@@ -9,5 +10,17 @@ class Article(models.Model):
     # add in thumbnail later
     # add in author later
 
-#pyhton manage.py makemigrations
-#python manage.py migrate
+
+def __str__(self):
+    return self.title
+
+# pyhton manage.py makemigrations
+# python manage.py migrate
+# from articles.models import Article
+# Article.objects.all()
+# article=Article()
+# article
+# article.title = "hello,world"
+# article.title
+# article.save()
+# Article.objects.all()[0].title
